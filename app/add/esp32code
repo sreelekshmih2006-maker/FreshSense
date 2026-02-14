@@ -1,0 +1,31 @@
+#define BLYNK_PRINT Serial
+#include <WiFi.h>
+#include <BlynkSimpleEsp32.h>
+
+char auth[] = "YOUR_BLYNK_TOKEN";
+char ssid[] = "tinkerspace";
+char pass[] = "123tinkerspace";
+
+HardwareSerial arduino(2); // UART2
+
+void setup() {
+  Serial.begin(9600);
+  arduino.begin(9600, SERIAL_8N1, 16, 17);
+  Blynk.begin(auth, ssid, pass);
+}
+
+void loop() {
+  Blynk.run();
+
+  if (arduino.available()) {
+    String data = arduino.readStringUntil('\n');
+
+    float t, h;
+    int a;
+    sscanf(data.c_str(), "%f,%f,%d", &t, &h, &a);
+
+    Blynk.virtualWrite(V0, t);
+    Blynk.virtualWrite(V1, h);
+    Blynk.virtualWrite(V2, a);
+  }
+}
