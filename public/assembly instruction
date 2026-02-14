@@ -1,0 +1,94 @@
+🔧 ASSEMBLY INSTRUCTIONS
+
+Arduino-Based Refrigerator Monitoring System
+
+Step 1️⃣ – Prepare the Workspace
+
+Keep a dry table (no moisture)
+
+Tools needed:
+
+Arduino Nano
+
+Breadboard
+
+Jumper wires
+
+USB cable
+
+Do not power the circuit while wiring
+
+Step 2️⃣ – Mount Arduino Nano on Breadboard
+
+Insert the Arduino Nano into the breadboard
+
+Ensure both rows of pins are firmly seated
+
+Keep USB port facing outward for easy connection
+
+Step 3️⃣ – Connect the DHT22 Sensor (Temperature & Humidity)
+Pin Connections
+DHT22 Pin	Connect To
+VCC	Arduino 5V
+DATA	Arduino D2
+GND	Arduino GND
+Important:
+
+Place a 10 kΩ resistor between VCC and DATA
+
+This resistor ensures stable communication
+
+Step 4️⃣ – Connect the MQ-137 Ammonia Gas Sensor
+Pin Connections
+MQ-137 Pin	Connect To
+VCC	Arduino 5V
+GND	Arduino GND
+AO	Arduino A0
+DO	Not connected
+
+📌 Use AO (Analog Output) for ammonia level measurement.
+
+Step 5️⃣ – Common Power Connections
+
+Connect all GND pins together
+
+Connect all VCC pins to 5V
+
+Use breadboard power rails for neat wiring
+
+Step 6️⃣ – Placement in Refrigerator System
+Correct Placement
+
+Arduino + MQ-137 → Outside refrigerator
+
+DHT22 sensor → Inside refrigerator
+
+Run sensor wires through door edge or cable hole
+
+Seal opening using rubber grommet or insulation tape
+
+⚠️ Prevent condensation near electronics.
+
+Step 7️⃣ – Power & Testing
+
+Connect Arduino to PC using USB cable
+
+Upload Arduino code
+
+Open Serial Monitor (9600 baud)
+
+Verify:
+
+Temperature in °C
+
+Humidity in %
+
+Ammonia ADC values
+
+Step 8️⃣ – Final Inspection Checklist ✅
+
+✔ All wires tightly connected
+✔ No short circuits
+✔ Resistor present on DHT22
+✔ MQ-137 warmed up (24–48 hours for accurate readings)
+✔ Electronics dry and enclosed
