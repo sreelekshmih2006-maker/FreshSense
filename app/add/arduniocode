@@ -1,0 +1,27 @@
+#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT22
+#define MQ_PIN A0
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+
+void loop() {
+  float humidity = dht.readHumidity();
+  float temperature = dht.readTemperature(); // Celsius
+  int ammoniaValue = analogRead(MQ_PIN);
+
+  Serial.print("Temp: ");
+  Serial.print(temperature);
+  Serial.print(" °C | Humidity: ");
+  Serial.print(humidity);
+  Serial.print(" % | Ammonia ADC: ");
+  Serial.println(ammoniaValue);
+
+  delay(2000);
+}
