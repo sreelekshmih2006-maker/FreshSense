@@ -1,0 +1,25 @@
+🧾 BILL OF MATERIALS (COST ESTIMATION)
+
+Project Title:
+Arduino-Based Refrigerator Monitoring System (Temperature, Humidity & Ammonia)
+
+📦 Electronics Components Bill
+S.No	Component Name	Specification	Qty	Unit Price (₹)	Total (₹)
+1	Arduino Nano (CH340)	ATmega328P, 5V	1	250	250
+2	Temperature & Humidity Sensor	DHT22 (AM2302)	1	350	350
+3	Ammonia Gas Sensor Module	MQ-137	1	650	650
+4	Breadboard	830 Tie Points	1	120	120
+5	Jumper Wires	Male–Male (Pack)	1	100	100
+6	Jumper Wires	Male–Female (Pack)	1	120	120
+7	Resistor	10 kΩ	1	5	5
+8	USB Cable	Mini/Micro USB	1	80	80
+🧊 Refrigerator Setup Accessories
+S.No	Component	Purpose	Qty	Unit Price (₹)	Total (₹)
+9	Silicone Insulated Wire	Cold-resistant wiring	1	100	100
+10	Plastic Enclosure Box	Protect electronics	1	150	150
+11	Rubber Grommet	Cable sealing	1	30	30
+💰 Cost Summary
+Description	Amount (₹)
+Total Electronics Cost	1,675
+Accessories Cost	280
+Grand Total	₹1,955
